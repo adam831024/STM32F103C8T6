@@ -46,10 +46,10 @@
 /******************************************************************************
  * Function Prototypes
  *******************************************************************************/
-void delayUs(uint16_t us);
-void delayMs(uint16_t ms);
-void delayInit(void);
-void *osMalloc(uint16_t size);
+void delay_ms(uint16_t nms);
+void delay_us(uint16_t nus);
+void SysTick_Init(uint8_t SYSCLK);
+ void *osMalloc(uint16_t size);
 void osFree(void *ptr);
 #endif /*_OS_UTILITY_H_*/
 

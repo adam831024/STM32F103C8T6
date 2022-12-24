@@ -37,8 +37,8 @@
 /******************************************************************************
  * Module Variable Definitions
  *******************************************************************************/
-static uint8_t fac_us = 0;
-static uint16_t fac_ms = 0;
+static uint8_t	fac_us=0;
+static uint16_t	fac_ms=0;
 /******************************************************************************
  * Function Prototypes
  *******************************************************************************/
@@ -50,14 +50,12 @@ static uint16_t fac_ms = 0;
  * @brief     syste tick delay init
  * @return                              void
  *******************************************************************************/
-void delayInit(void)
+void SysTick_Init(uint8_t SYSCLK)
 {
-    /*systick HCLK,interrupt interval 1ms*/
-	/*SystemCoreClock == 12MHz
-    run 12 ticks == 1us, so 1 us delay needs 3 times while loop */ 
-    fac_us = SystemCoreClock / 4000000; // TODO: not sure
-    fac_ms = (uint16_t)fac_us * 1000;
-    // printf("fac_us = %d, fac_ms = %d, SystemCoreClock  =%d\r\n",fac_us, fac_ms, SystemCoreClock);
+	SysTick->CTRL = 0xfffffffb;
+	fac_us=SYSCLK/8;
+	fac_ms=(uint16_t)fac_us*1000;
+
 }
 
 /******************************************************************************
@@ -65,18 +63,19 @@ void delayInit(void)
  * @param[in] us                		microseconds
  * @return                              void
  *******************************************************************************/
-void delayUs(uint16_t us)
+void delay_us(uint16_t nus)
 {
-    uint32_t temp;
-    SysTick->LOAD = (uint32_t)us * fac_us;
-    SysTick->VAL = 0x00;
-    SysTick->CTRL = 0x01;
-    do
-    {
-        temp = SysTick->CTRL;
-    } while ((temp & 0x01) && (!(temp & (1 << 16))));
-    SysTick->CTRL = 0x00;
-    SysTick->VAL = 0x00;
+	uint32_t temp;
+	SysTick->LOAD = (uint32_t)nus*fac_us;
+	SysTick->VAL =0x00; 	
+	SysTick->CTRL =0x01;
+	do
+	{
+	 temp = SysTick->CTRL;
+	}
+	while((temp&0x01)&&(!(temp&(1<<16))));
+	SysTick->CTRL = 0x00;
+	SysTick->VAL =0x00;
 }
 
 /******************************************************************************
@@ -84,18 +83,19 @@ void delayUs(uint16_t us)
  * @param[in] ms                		milliseconds
  * @return                              void
  *******************************************************************************/
-void delayMs(uint16_t ms)
+void delay_ms(uint16_t nms)
 {
-    uint32_t temp;
-    SysTick->LOAD = (uint32_t)ms * fac_ms;
-    SysTick->VAL = 0x00;
-    SysTick->CTRL = 0x01;
-    do
-    {
-        temp = SysTick->CTRL;
-    } while ((temp & 0x01) && (!(temp & (1 << 16))));
-    SysTick->CTRL = 0x00;
-    SysTick->VAL = 0x00;
+	uint32_t temp;
+	SysTick->LOAD = (uint32_t)nms*fac_ms;
+	SysTick->VAL =0x00; 	
+	SysTick->CTRL =0x01;
+	do
+	{
+	 temp = SysTick->CTRL;
+	}
+	while((temp&0x01)&&(!(temp&(1<<16))));
+	SysTick->CTRL = 0x00;
+	SysTick->VAL =0x00;
 }
 
 #if 0

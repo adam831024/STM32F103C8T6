@@ -26,6 +26,8 @@
 #define RTE_DEVICE_STDPERIPH_RTC
 /* Keil::Device:StdPeriph Drivers:USART:3.6.0 */
 #define RTE_DEVICE_STDPERIPH_USART
+/* Keil::Device:StdPeriph Drivers:WWDG:3.6.0 */
+#define RTE_DEVICE_STDPERIPH_WWDG
 
 
 #endif /* RTE_COMPONENTS_H */

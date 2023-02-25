@@ -20,7 +20,7 @@
 
 /*Application include*/
 #include "osUtility.h"
-
+#include "osWatchDog.h"
 /******************************************************************************
  * Module Preprocessor Constants
  *******************************************************************************/
@@ -196,6 +196,9 @@ int main(void)
   /*LED init*/
   initGpioPin(RCC_APB2Periph_GPIOC, GPIO_Pin_13, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
 
+  /*WDT init*/
+  osWatchDogInit();
+  
   while (1)
   {
     /* delay */

@@ -1,8 +1,7 @@
 # STM32F103C8T6
 
 ### IDE  
-ARM MDK5.37    
-ARM CMSIS 5.9.0 PACK
+Keil MDK5.16    
 
 ### Device  
 Chip: STM32F103C8T6

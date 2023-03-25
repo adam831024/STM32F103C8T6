@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "timers.h": "c",
+        "freertos.h": "c",
+        "freertosconfig.h": "c"
     }
 }

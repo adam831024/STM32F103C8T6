@@ -18,6 +18,14 @@
 #include <stdint.h>
 #include <stdio.h>
 
+/*Free-RTOS include*/
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
+#include "semphr.h"
+#include "timers.h"
+#include "task.h"
+#include "queue.h"
+
 /*Application include*/
 #include "osUtility.h"
 #include "osWatchDog.h"
@@ -37,7 +45,14 @@
 /******************************************************************************
  * Module Variable Definitions
  *******************************************************************************/
+/*timer*/
+TimerHandle_t stateCheckTimerHandle = NULL;
 
+/*task*/
+TaskHandle_t mainTaskHandle = NULL;
+
+/*task arg*/
+uint8_t mainTaskArg = 0x01;
 /******************************************************************************
  * Function Prototypes
  *******************************************************************************/
@@ -179,7 +194,35 @@ void initGpioPin(uint32_t gpioGroup, uint16_t gpioPin, GPIOMode_TypeDef mode, GP
   }
   GPIO_Init(gpioBase, &GPIO_InitStructure);
 }
+/******************************************************************************
+ * @brief     state check timer callack every second
+ * @param[out] xTimer             		the pointer to the TimerHandle_t.
+ * @return                              void
+ *******************************************************************************/
+static void stateCheckTimerCb(TimerHandle_t xTimer)
+{
+  /*run every second*/
+  static uint8_t count = 0;
+  uartSend(&count, 1);
+  count++;
+}
 
+/******************************************************************************
+ * @brief     OS main task
+ * @param[out] pvParameters             event arg
+ * @return                              void
+ *******************************************************************************/
+static void mainTask(void *pvParameters)
+{
+  while (1)
+  {
+    /* toggle C13*/
+    GPIOC->ODR ^= GPIO_Pin_13;
+    uartSend((uint8_t*)pvParameters, 1);
+    vTaskDelay(1000);
+    taskYIELD();
+  }
+}
 /******************************************************************************
  * @brief     main
  * @return    0
@@ -189,7 +232,7 @@ int main(void)
   /*systick timer*/
   SetSysClockTo72();
   SysTick_Init(72);
-	static uint16_t count = 0;
+
   /* Initialize USART*/
   usart_init();
 
@@ -198,16 +241,17 @@ int main(void)
 
   /*WDT init*/
   osWatchDogInit();
+ 
+  /* system delay */
+  delay_ms(1000);
   
-  while (1)
-  {
-    /* delay */
-    delay_ms(1000); 
-    /* toggle C13*/
-    GPIOC->ODR ^= GPIO_Pin_13; 
-    uartSend(&count, 1);
-    count++;
-  }
-
+  stateCheckTimerHandle = xTimerCreate("stateCheck" /* The timer name. */,
+                                        1000 / portTICK_PERIOD_MS /*const TickType_t xTimerPeriodInTicks*/,
+                                        pdTRUE /*const UBaseType_t uxAutoReload, pdFALSE for on shot, pdTRUE for period*/,
+                                        NULL /*void * const pvTimerID*/,
+                                        stateCheckTimerCb /*TimerCallbackFunction_t pxCallbackFunction*/);
+  xTaskCreate(mainTask, "mainTask", 256, (void *)&mainTaskArg, 2, &mainTaskHandle);
+  xTimerStart(stateCheckTimerHandle, 0);
+  vTaskStartScheduler();
   return 0;
 }

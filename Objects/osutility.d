@@ -1,20 +1,21 @@
-./objects/osutility.o: src\osUtility.c \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h \
-  RTE\_Target_1\RTE_Components.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h \
-  RTE\Device\STM32F103C8\stm32f10x_conf.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rtc.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_wwdg.h \
-  C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h \
-  inc\osUtility.h
+.\objects\osutility.o: src\osUtility.c
+.\objects\osutility.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\osutility.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\osutility.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\osutility.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h
+.\objects\osutility.o: C:\Users\vincentadam\Desktop\新增資料夾\STM32F103C8T6\RTE\RTE_Components.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h
+.\objects\osutility.o: C:\Users\vincentadam\Desktop\新增資料夾\STM32F103C8T6\RTE\Device\STM32F103C8\stm32f10x_conf.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rtc.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_wwdg.h
+.\objects\osutility.o: C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h
+.\objects\osutility.o: .\inc\osUtility.h

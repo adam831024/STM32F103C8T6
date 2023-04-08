@@ -29,6 +29,10 @@
 /*Application include*/
 #include "osUtility.h"
 #include "osWatchDog.h"
+#include "osUart.h"
+#include "osTask.h"
+#include "message.h"
+
 /******************************************************************************
  * Module Preprocessor Constants
  *******************************************************************************/
@@ -204,6 +208,8 @@ static void stateCheckTimerCb(TimerHandle_t xTimer)
   /*run every second*/
   static uint8_t count = 0;
   uartSend(&count, 1);
+  // uint8_t count[2] = {0xCC, 0xCC};
+  // uartSend(count, 2);
   count++;
 }
 
@@ -219,6 +225,9 @@ static void mainTask(void *pvParameters)
     /* toggle C13*/
     GPIOC->ODR ^= GPIO_Pin_13;
     uartSend((uint8_t*)pvParameters, 1);
+    // uint8_t *event = osMalloc(4);
+    // memset(event, 0xFF, 4);
+    // uartSend(event, 4);
     vTaskDelay(1000);
     taskYIELD();
   }
@@ -252,6 +261,8 @@ int main(void)
                                         stateCheckTimerCb /*TimerCallbackFunction_t pxCallbackFunction*/);
   xTaskCreate(mainTask, "mainTask", 256, (void *)&mainTaskArg, 2, &mainTaskHandle);
   xTimerStart(stateCheckTimerHandle, 0);
+  MessageInit();
+  funcHdlTaskInit();
   vTaskStartScheduler();
   return 0;
 }

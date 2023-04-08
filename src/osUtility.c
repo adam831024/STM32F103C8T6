@@ -14,9 +14,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #include "stm32f10x.h"                  // Device header
 
 /*Free-RTOS include*/
+#include "FreeRTOS.h"
 
 /*Application include*/
 #include "osUtility.h"
@@ -98,7 +100,6 @@ void delay_ms(uint16_t nms)
 	SysTick->VAL =0x00;
 }
 
-#if 0
 /******************************************************************************
  * @DESCRIPTION: malloc
  * @param[in] size
@@ -108,8 +109,12 @@ void delay_ms(uint16_t nms)
 void *osMalloc(uint16_t size)
 {
     void *memory = (void *)pvPortMalloc(size);
-    memset(memory, 0, size);
-    return memory;
+		if (memory)
+		{
+	 		memset(memory, 0, size);
+    	return memory;
+		}
+		return NULL;
 }
 /******************************************************************************
  * @DESCRIPTION: 
@@ -125,5 +130,5 @@ void osFree(void *ptr)
         vPortFree(ptr);
     }
 }
-#endif
+
 /*************** END OF FUNCTIONS *********************************************/

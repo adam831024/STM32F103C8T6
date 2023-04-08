@@ -18,6 +18,7 @@
 
 /*Application include*/
 #include "osUart.h"
+#include "message.h"
 
 /******************************************************************************
  * Module Preprocessor Constants

@@ -437,6 +437,31 @@
               <FileType>1</FileType>
               <FilePath>.\src\osWatchDog.c</FilePath>
             </File>
+            <File>
+              <FileName>message.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\message.c</FilePath>
+            </File>
+            <File>
+              <FileName>fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>osTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\osTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>sampleTask1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\sampleTask1.c</FilePath>
+            </File>
+            <File>
+              <FileName>sampleTask2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\sampleTask2.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

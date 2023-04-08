@@ -136,6 +136,9 @@ void uartSend(uint8_t* data, uint16_t dataLen)
   for (uint16_t i = 0; i < dataLen; i++)
   {
     USART_SendData(USART1, data[i]);
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+    {
+    }
   }
 }
 

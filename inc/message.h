@@ -21,7 +21,7 @@
 #include "queue.h"
 
 /*Application include*/
-
+#include "osUtility.h"
 /******************************************************************************
  * Preprocessor Constants
  *******************************************************************************/
@@ -52,12 +52,18 @@ typedef uint8_t Task;
 
 typedef Task TaskId ;
 
+typedef struct message_t
+{
+  // uint16_t dataLen;
+  uint8_t dataLen[2];
+  uint8_t data[1];
+} PACKED message_t;
+
 typedef struct 
 {
   TaskId taskId;
   MessageId msgId;
-  uint8_t msgLen[2];
-  uint8_t msg[1];
+  message_t msg;
 }osMsg_t;
 
 /******************************************************************************

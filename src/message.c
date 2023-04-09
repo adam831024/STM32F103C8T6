@@ -51,7 +51,7 @@ QueueHandle_t taskMessageQueue;
 void MessageInit( void )
 {
   /* Create a queue that can hold a maximum of 10 pointers, in this case character pointers. */
-  taskMessageQueue = xQueueCreate(10, sizeof(osMsg_t *));
+  taskMessageQueue = xQueueCreate(10, sizeof(char *));
 }
 
 /******************************************************************************
@@ -68,23 +68,23 @@ void MessageInit( void )
  *******************************************************************************/
 void MessageSend( Task task, MessageId id, void* message )
 {
-#if 0
   osMsg_t *taskEvent = NULL;
   uint16_t messageLen = 0;
   if(message)
-  (
-    messageLen = BUILD_UINT16(message[0], message[1]);
-  )
+  {
+    messageLen = BUILD_UINT16(((uint8_t*)message)[0], ((uint8_t*)message)[1]);
+  }
   taskEvent = osMalloc(sizeof(osMsg_t)+messageLen-1);
   taskEvent->msgId = id;
   taskEvent->taskId = task;
-  taskEvent->msgLen = messageLen;
-  memcpy(taskEvent->msg, message, messageLen+2);
-  
+  taskEvent->msg.dataLen[0] = ((uint8_t *)message)[0];
+  taskEvent->msg.dataLen[1] = ((uint8_t *)message)[1];
+
+  memcpy(taskEvent->msg.data, &((uint8_t*)message)[2], messageLen);
+  // uartSend((uint8_t *)taskEvent, sizeof(osMsg_t) + messageLen - 1);
   xQueueSend(taskMessageQueue, /* The handle of the queue. */
-              taskEvent,        /* The address of the pointer that points to the buffer. */
-              portMAX_DELAY);
-#endif
+             &taskEvent,        /* The address of the pointer that points to the buffer. */
+             portMAX_DELAY);
 }
 
 /******************************************************************************

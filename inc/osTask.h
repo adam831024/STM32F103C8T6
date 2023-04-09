@@ -36,6 +36,8 @@ enum TaskId
 {
   SAMPLE_TASK_1,
   SAMPLE_TASK_2,
+
+  END_OF_TASK_ID,
 };
 /******************************************************************************
  * Typedefs

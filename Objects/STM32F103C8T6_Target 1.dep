@@ -1,5 +1,5 @@
 Dependencies for Project 'STM32F103C8T6', Target 'Target 1': (DO NOT MODIFY !)
-F (.\src\main.c)(0x64313DAF)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\src\main.c)(0x643269F2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
 I (C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\RTE_Components.h)(0x6431047F)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
@@ -29,11 +29,11 @@ I (.\FreeRTOS\inc\queue.h)(0x6431047F)
 I (.\FreeRTOS\inc\task.h)(0x6431047F)
 I (.\FreeRTOS\inc\list.h)(0x6431047F)
 I (.\FreeRTOS\inc\timers.h)(0x6431047F)
-I (.\inc\osUtility.h)(0x64311193)
+I (.\inc\osUtility.h)(0x64325C54)
 I (.\inc\osWatchDog.h)(0x6431047F)
 I (.\inc\osUart.h)(0x6431047F)
-I (.\inc\osTask.h)(0x64311EBA)
-I (.\inc\message.h)(0x64312785)
+I (.\inc\osTask.h)(0x643269BE)
+I (.\inc\message.h)(0x64326365)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 F (.\src\osUtility.c)(0x643112A9)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\osutility.o --omf_browse .\objects\osutility.crf --depend .\objects\osutility.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
@@ -63,8 +63,8 @@ I (.\FreeRTOS\inc\portable.h)(0x6431047F)
 I (.\FreeRTOS\inc\deprecated_definitions.h)(0x6431047F)
 I (.\FreeRTOS\port\RVDS\ARM_CM3\portmacro.h)(0x6431047F)
 I (.\FreeRTOS\inc\mpu_wrappers.h)(0x6431047F)
-I (.\inc\osUtility.h)(0x64311193)
-F (.\src\osUart.c)(0x64313D59)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\osuart.o --omf_browse .\objects\osuart.crf --depend .\objects\osuart.d)
+I (.\inc\osUtility.h)(0x64325C54)
+F (.\src\osUart.c)(0x64325251)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\osuart.o --omf_browse .\objects\osuart.crf --depend .\objects\osuart.d)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
 I (C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\RTE_Components.h)(0x6431047F)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F4ADE)
@@ -81,7 +81,7 @@ I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x61AD795E)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD795E)
 I (.\inc\osUart.h)(0x6431047F)
-I (.\inc\message.h)(0x64312785)
+I (.\inc\message.h)(0x64326365)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (.\FreeRTOS\inc\FreeRTOS.h)(0x6431047F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
@@ -94,6 +94,7 @@ I (.\FreeRTOS\inc\mpu_wrappers.h)(0x6431047F)
 I (.\FreeRTOS\inc\queue.h)(0x6431047F)
 I (.\FreeRTOS\inc\task.h)(0x6431047F)
 I (.\FreeRTOS\inc\list.h)(0x6431047F)
+I (.\inc\osUtility.h)(0x64325C54)
 F (.\src\osWatchDog.c)(0x6431047F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\oswatchdog.o --omf_browse .\objects\oswatchdog.crf --depend .\objects\oswatchdog.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD795E)
@@ -110,10 +111,10 @@ I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x61AD795E)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x61AD795E)
 I (C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD795E)
-F (.\src\message.c)(0x6431369F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\message.o --omf_browse .\objects\message.crf --depend .\objects\message.d)
+F (.\src\message.c)(0x6432673C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\message.o --omf_browse .\objects\message.crf --depend .\objects\message.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AEF5F2)
-I (.\inc\message.h)(0x64312785)
+I (.\inc\message.h)(0x64326365)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (.\FreeRTOS\inc\FreeRTOS.h)(0x6431047F)
@@ -127,14 +128,14 @@ I (.\FreeRTOS\inc\mpu_wrappers.h)(0x6431047F)
 I (.\FreeRTOS\inc\queue.h)(0x6431047F)
 I (.\FreeRTOS\inc\task.h)(0x6431047F)
 I (.\FreeRTOS\inc\list.h)(0x6431047F)
+I (.\inc\osUtility.h)(0x64325C54)
 I (.\inc\fifo.h)(0x6360E7C8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
-I (.\inc\osUtility.h)(0x64311193)
 F (.\src\fifo.c)(0x643105F7)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\fifo.o --omf_browse .\objects\fifo.crf --depend .\objects\fifo.d)
 I (.\inc\fifo.h)(0x6360E7C8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
-F (.\src\osTask.c)(0x64313708)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\ostask.o --omf_browse .\objects\ostask.crf --depend .\objects\ostask.d)
+F (.\src\osTask.c)(0x643268AE)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\ostask.o --omf_browse .\objects\ostask.crf --depend .\objects\ostask.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
 I (.\FreeRTOS\inc\FreeRTOS.h)(0x6431047F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
@@ -147,17 +148,17 @@ I (.\FreeRTOS\inc\mpu_wrappers.h)(0x6431047F)
 I (.\FreeRTOS\inc\task.h)(0x6431047F)
 I (.\FreeRTOS\inc\list.h)(0x6431047F)
 I (.\FreeRTOS\inc\queue.h)(0x6431047F)
-I (.\inc\osTask.h)(0x64311EBA)
-I (.\inc\message.h)(0x64312785)
+I (.\inc\osTask.h)(0x643269BE)
+I (.\inc\message.h)(0x64326365)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
+I (.\inc\osUtility.h)(0x64325C54)
 I (.\inc\osUart.h)(0x6431047F)
-I (.\inc\osUtility.h)(0x64311193)
 I (.\inc\sampleTask1.h)(0x643138B1)
 I (.\inc\sampleTask2.h)(0x643138CD)
-F (.\src\sampleTask1.c)(0x64313856)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\sampletask1.o --omf_browse .\objects\sampletask1.crf --depend .\objects\sampletask1.d)
+F (.\src\sampleTask1.c)(0x6432692E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\sampletask1.o --omf_browse .\objects\sampletask1.crf --depend .\objects\sampletask1.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
 I (.\inc\sampleTask1.h)(0x643138B1)
-I (.\inc\message.h)(0x64312785)
+I (.\inc\message.h)(0x64326365)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (.\FreeRTOS\inc\FreeRTOS.h)(0x6431047F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
@@ -170,10 +171,12 @@ I (.\FreeRTOS\inc\mpu_wrappers.h)(0x6431047F)
 I (.\FreeRTOS\inc\queue.h)(0x6431047F)
 I (.\FreeRTOS\inc\task.h)(0x6431047F)
 I (.\FreeRTOS\inc\list.h)(0x6431047F)
-F (.\src\sampleTask2.c)(0x64313885)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\sampletask2.o --omf_browse .\objects\sampletask2.crf --depend .\objects\sampletask2.d)
+I (.\inc\osUtility.h)(0x64325C54)
+I (.\inc\osUart.h)(0x6431047F)
+F (.\src\sampleTask2.c)(0x64326945)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\sampletask2.o --omf_browse .\objects\sampletask2.crf --depend .\objects\sampletask2.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AEF5F2)
 I (.\inc\sampleTask2.h)(0x643138CD)
-I (.\inc\message.h)(0x64312785)
+I (.\inc\message.h)(0x64326365)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55AEF5F2)
 I (.\FreeRTOS\inc\FreeRTOS.h)(0x6431047F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)
@@ -186,6 +189,7 @@ I (.\FreeRTOS\inc\mpu_wrappers.h)(0x6431047F)
 I (.\FreeRTOS\inc\queue.h)(0x6431047F)
 I (.\FreeRTOS\inc\task.h)(0x6431047F)
 I (.\FreeRTOS\inc\list.h)(0x6431047F)
+I (.\inc\osUtility.h)(0x64325C54)
 F (.\FreeRTOS\src\croutine.c)(0x6431047F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver\Config -I..\..\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver -I.\inc -I.\FreeRTOS\inc -I.\FreeRTOS\port\RVDS\ARM_CM3-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE-I C:\Users\vincentadam\Desktop\STM32F103C8T6\RTE\Device\STM32F103C8-I C:\Users\vincentadam\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc-I C:\Users\vincentadam\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\RTE_Driver-D__UVISION_VERSION="516" -D_RTE_ -DSTM32F10X_MD-o .\objects\croutine.o --omf_browse .\objects\croutine.crf --depend .\objects\croutine.d)
 I (.\FreeRTOS\inc\FreeRTOS.h)(0x6431047F)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55AEF5F2)

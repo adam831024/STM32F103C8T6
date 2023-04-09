@@ -15,6 +15,6 @@
 .\objects\message.o: .\FreeRTOS\inc\queue.h
 .\objects\message.o: .\FreeRTOS\inc\task.h
 .\objects\message.o: .\FreeRTOS\inc\list.h
+.\objects\message.o: .\inc\osUtility.h
 .\objects\message.o: .\inc\fifo.h
 .\objects\message.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\message.o: .\inc\osUtility.h

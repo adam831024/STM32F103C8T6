@@ -43,6 +43,8 @@
  *******************************************************************************/
 void sample2TaskFunc(osMsg_t *pMsg)
 {
+  uint8_t adam[3] = {0x88, pMsg->msgId, 0x88};
+  uartSend(adam, 3);
   switch (pMsg->msgId)
   {
     case SAMPLE2_MSG1:

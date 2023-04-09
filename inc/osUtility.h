@@ -27,6 +27,8 @@
 #define LO_UINT16(a) ((a) & 0xFF)
 #define BUILD_UINT16(hiByte, loByte) \
           ((uint16_t)(((loByte) & 0x00FF) + (((hiByte) & 0x00FF) << 8)))
+
+#define PACKED __attribute__((packed))
 /******************************************************************************
  * Configuration Constants
  *******************************************************************************/

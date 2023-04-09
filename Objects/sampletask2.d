@@ -14,3 +14,4 @@
 .\objects\sampletask2.o: .\FreeRTOS\inc\queue.h
 .\objects\sampletask2.o: .\FreeRTOS\inc\task.h
 .\objects\sampletask2.o: .\FreeRTOS\inc\list.h
+.\objects\sampletask2.o: .\inc\osUtility.h

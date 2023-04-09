@@ -29,3 +29,4 @@
 .\objects\osuart.o: .\FreeRTOS\inc\queue.h
 .\objects\osuart.o: .\FreeRTOS\inc\task.h
 .\objects\osuart.o: .\FreeRTOS\inc\list.h
+.\objects\osuart.o: .\inc\osUtility.h

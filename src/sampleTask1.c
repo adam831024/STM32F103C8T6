@@ -16,6 +16,7 @@
 
 /*Application include*/
 #include "sampleTask1.h"
+#include "osUart.h"
 
 /******************************************************************************
  * Module Preprocessor Constants
@@ -42,6 +43,8 @@
  *******************************************************************************/
 void sample1TaskFunc(osMsg_t *pMsg)
 {
+  uint8_t adam[3] = {0x99, pMsg->msgId, 0x99};
+  uartSend(adam, 3);
   switch (pMsg->msgId)
   {
     case SAMPLE1_MSG1:

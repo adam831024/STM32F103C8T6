@@ -14,7 +14,7 @@
 .\objects\ostask.o: .\inc\osTask.h
 .\objects\ostask.o: .\inc\message.h
 .\objects\ostask.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\ostask.o: .\inc\osUart.h
 .\objects\ostask.o: .\inc\osUtility.h
+.\objects\ostask.o: .\inc\osUart.h
 .\objects\ostask.o: .\inc\sampleTask1.h
 .\objects\ostask.o: .\inc\sampleTask2.h

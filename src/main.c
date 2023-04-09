@@ -223,6 +223,15 @@ static void mainTask(void *pvParameters)
     /* toggle C13*/
     GPIOC->ODR ^= GPIO_Pin_13;
     uartSend((uint8_t*)pvParameters, 1);
+#if 1 /*TODO: debug purpose*/
+    uint8_t *adam = osMalloc(4);
+    adam[0] = 0x00;
+    adam[1] = 0x02;
+    adam[2] = 0xaa;
+    adam[3] = 0xbb;
+    MessageSend(0x01, 0x01, adam);
+    osFree(adam);
+#endif
     vTaskDelay(1000);
     taskYIELD();
   }

@@ -58,17 +58,12 @@ const taskFuncStruct taskFuncTable[] =
 static void funcHdlTask(void *pvParameters)
 {
   void *pData = NULL;
-  uint16_t dataLen = 0;
   while (1)
   {
-    xQueueReceive(taskMessageQueue, /* The handle of the queue. */
-                  &pData,           /* Store the buffer’s address in pcReceivedString. */
-                  portMAX_DELAY);
+    xQueueReceive(taskMsgQueue, &pData, portMAX_DELAY);
     if (pData)
     {
       osMsg_t *pBuf = (osMsg_t*) pData;
-      dataLen = BUILD_UINT16(pBuf->msg.dataLen[0], pBuf->msg.dataLen[1]);
-      uartSend(pBuf->msg.data, dataLen);
       if (END_OF_TASK_ID > pBuf->taskId)
       {
         taskFuncTable[pBuf->taskId](pBuf);
@@ -80,7 +75,6 @@ static void funcHdlTask(void *pvParameters)
       
       osFree(pData);
     }
-    taskYIELD();
   }
 }
 
@@ -88,7 +82,7 @@ static void funcHdlTask(void *pvParameters)
  * @brief     Initialize whole task function handler
  * @return                              void
  *******************************************************************************/
-void funcHdlTaskInit(void)
+void msgHdlTaskInit(void)
 {
   xTaskCreate(funcHdlTask, "funcHdlTask", 512, NULL /*arg*/, 2, NULL /*pxCreatedTask*/);
 }

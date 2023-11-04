@@ -37,6 +37,8 @@ enum SAMPLE1_MSG_ID
   SAMPLE1_MSG1,
   SAMPLE1_MSG2,
   SAMPLE1_MSG3,
+  SAMPLE1_MSG4,
+  SAMPLE1_MSG5,
 };
 /******************************************************************************
  * Typedefs

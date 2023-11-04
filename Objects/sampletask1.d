@@ -15,4 +15,6 @@
 .\objects\sampletask1.o: .\FreeRTOS\inc\task.h
 .\objects\sampletask1.o: .\FreeRTOS\inc\list.h
 .\objects\sampletask1.o: .\inc\osUtility.h
+.\objects\sampletask1.o: .\inc\sampleTask2.h
+.\objects\sampletask1.o: .\inc\osTask.h
 .\objects\sampletask1.o: .\inc\osUart.h

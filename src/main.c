@@ -32,11 +32,11 @@
 #include "osUart.h"
 #include "osTask.h"
 #include "message.h"
+#include "sampleTask2.h"
 
 /******************************************************************************
  * Module Preprocessor Constants
  *******************************************************************************/
-#define CONSTANT 5
 
 /******************************************************************************
  * Module Preprocessor Macros
@@ -207,7 +207,11 @@ static void stateCheckTimerCb(TimerHandle_t xTimer)
 {
   /*run every second*/
   static uint8_t count = 0;
-  uartSend(&count, 1);
+#if 1 //debug purpose
+  uint8_t debug[3] = {0, 1,0};
+  debug[2] = count;
+  MessageSend(SAMPLE_TASK_2, SAMPLE2_MSG1, debug);
+#endif
   count++;
 }
 
@@ -222,18 +226,12 @@ static void mainTask(void *pvParameters)
   {
     /* toggle C13*/
     GPIOC->ODR ^= GPIO_Pin_13;
-    uartSend((uint8_t*)pvParameters, 1);
-#if 1 /*TODO: debug purpose*/
-    uint8_t *adam = osMalloc(4);
-    adam[0] = 0x00;
-    adam[1] = 0x02;
-    adam[2] = 0xaa;
-    adam[3] = 0xbb;
-    MessageSend(0x01, 0x01, adam);
-    osFree(adam);
+#if 1 //debug purpose
+    uint8_t debug[5] = {0, 3, 0xAA, 0xBB, 0};
+    debug[4] = *(uint8_t*)pvParameters;
+    MessageSend(SAMPLE_TASK_2, SAMPLE2_MSG2, debug);
 #endif
     vTaskDelay(1000);
-    taskYIELD();
   }
 }
 /******************************************************************************
@@ -254,10 +252,11 @@ int main(void)
 
   /*WDT init*/
   osWatchDogInit();
- 
+  uartSend("00000", 5);
   /* system delay */
   delay_ms(1000);
-  
+  uartSend("11111", 5);
+
   stateCheckTimerHandle = xTimerCreate("stateCheck" /* The timer name. */,
                                         1000 / portTICK_PERIOD_MS /*const TickType_t xTimerPeriodInTicks*/,
                                         pdTRUE /*const UBaseType_t uxAutoReload, pdFALSE for on shot, pdTRUE for period*/,
@@ -266,7 +265,8 @@ int main(void)
   xTaskCreate(mainTask, "mainTask", 256, (void *)&mainTaskArg, 2, &mainTaskHandle);
   xTimerStart(stateCheckTimerHandle, 0);
   MessageInit();
-  funcHdlTaskInit();
+  msgHdlTaskInit();
+
   vTaskStartScheduler();
   return 0;
 }

@@ -50,7 +50,7 @@ typedef void (*taskFuncStruct)(osMsg_t *pMsg);
 /******************************************************************************
  * Function Prototypes
  *******************************************************************************/
-void funcHdlTaskInit(void);
+void msgHdlTaskInit(void);
 
 #endif /*_OS_TASK_H_*/
 /*************** END OF FUNCTIONS *********************************************/

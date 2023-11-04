@@ -15,6 +15,10 @@
 #include "stm32f10x_rtc.h"              // Keil::Device:StdPeriph Drivers:RTC
 
 /*Free-RTOS include*/
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
+#include "queue.h"
+#include "task.h"
 
 /*Application include*/
 #include "osUart.h"
@@ -37,10 +41,12 @@
  * Module Variable Definitions
  *******************************************************************************/
 volatile uint8_t rxData;
+QueueHandle_t uartRxQueue;
+TaskHandle_t uartRxTaskHandle = NULL;
 /******************************************************************************
  * Function Prototypes
  *******************************************************************************/
-
+static void uartRxTask(void *pvParameters);
 /******************************************************************************
  * Function Definitions
  *******************************************************************************/
@@ -108,6 +114,12 @@ void usart_init(void)
   /* Enable the USART1 Receive interrupt: this interrupt is generated when the
     USART1 receive data register is not empty */
   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+
+
+
+  //UART Rx Buffer Init
+  xTaskCreate(uartRxTask, "uartRxTask", 128, (void *)NULL, 1, &uartRxTaskHandle);
+  uartRxQueue = xQueueCreate(UART_RX_BUF_SIZE, sizeof(uint8_t));
 }
 /******************************************************************************
  * @brief     USART1 Rx interrupt Handle
@@ -119,8 +131,9 @@ void USART1_IRQHandler(void)
   {
     rxData = USART_ReceiveData(USART1);
 
+    xQueueSendFromISR(uartRxQueue, (void *)&rxData, NULL);
     // loop back
-    USART_SendData(USART1, rxData);
+    // USART_SendData(USART1, rxData);
   }
 }
 
@@ -142,5 +155,20 @@ void uartSend(uint8_t* data, uint16_t dataLen)
   }
 }
 
-
+/******************************************************************************
+ * @brief     uart Rx task and parsesr data
+ * @param[out] pvParameters             event arg
+ * @return                              void
+ *******************************************************************************/
+static void uartRxTask(void *pvParameters)
+{
+  uint8_t tData;
+  while (1)
+  {
+    xQueueReceive(uartRxQueue, &tData, portMAX_DELAY);
+    // uartSend(&tData, 1);
+    uint8_t test[4] = {0, 0};
+    MessageSend(0, tData, test);
+  }
+}
 /*************** END OF FUNCTIONS *********************************************/

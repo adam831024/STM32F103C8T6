@@ -3,6 +3,10 @@
         "stdio.h": "c",
         "timers.h": "c",
         "freertos.h": "c",
-        "freertosconfig.h": "c"
+        "freertosconfig.h": "c",
+        "xutility": "c",
+        "sampletask2.h": "c",
+        "message.h": "c",
+        "osuart.h": "c"
     }
 }

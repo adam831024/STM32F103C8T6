@@ -16,11 +16,11 @@
 
 /*Application include*/
 #include "sampleTask2.h"
+#include "osUart.h"
 
 /******************************************************************************
  * Module Preprocessor Constants
  *******************************************************************************/
-#define CONSTANT 5
 
 /******************************************************************************
  * Module Preprocessor Macros
@@ -43,16 +43,20 @@
  *******************************************************************************/
 void sample2TaskFunc(osMsg_t *pMsg)
 {
-  uint8_t adam[3] = {0x88, pMsg->msgId, 0x88};
-  uartSend(adam, 3);
+  uint16_t dataLen =  BUILD_UINT16(pMsg->msg.dataLen[0], pMsg->msg.dataLen[1]);
+#if 1 //debug purpose
+  uartSend((uint8_t *)pMsg, 4 + BUILD_UINT16(pMsg->msg.dataLen[0], pMsg->msg.dataLen[1]));
+#endif
   switch (pMsg->msgId)
   {
     case SAMPLE2_MSG1:
     {
+      // uartSend(pMsg->msg.data, dataLen);
     }
     break;
     case SAMPLE2_MSG2:
     {
+      // uartSend(pMsg->msg.data, dataLen);
     }
     break;
     case SAMPLE2_MSG3:

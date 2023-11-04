@@ -28,7 +28,9 @@
 /**
  * This constant is
  */
-
+#define MSG_QUEUE_SIZE  20
+#define INVALID_ID      0xFF
+#define VALID_ID        0x00
 /******************************************************************************
  * Configuration Constants
  *******************************************************************************/
@@ -66,10 +68,23 @@ typedef struct
   message_t msg;
 }osMsg_t;
 
+typedef struct 
+{
+  TaskId taskId;
+  MessageId msgId;
+}msgBlockState_t;
+
+typedef struct
+{
+  void* timerHandle;
+  void* payload;
+  uint8_t used;
+}msgSuspend_t;
+
 /******************************************************************************
  * Variables
  *******************************************************************************/
-extern QueueHandle_t taskMessageQueue;
+extern QueueHandle_t taskMsgQueue;
 
 /******************************************************************************
  * Function Prototypes
@@ -84,13 +99,9 @@ uint16_t MessageFlushTask(Task task);
 
 uint16_t MessageCancelAll(Task task, MessageId id);
 
-void MessageBlockTask ( Task task );
+void MessageBlock(Task task, MessageId id);
 
-void MessageUnblockTask ( Task task );
-
-void MessageBlock( Task task, MessageId id );
-
-void MessageUnblock( Task task, MessageId id );
+void MessageUnblock(Task task, MessageId id);
 
 
 #endif /*_MESSAGE_H_*/

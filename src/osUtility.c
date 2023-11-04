@@ -26,7 +26,6 @@
 /******************************************************************************
  * Module Preprocessor Constants
  *******************************************************************************/
-#define CONSTANT 5
 
 /******************************************************************************
  * Module Preprocessor Macros
@@ -57,7 +56,6 @@ void SysTick_Init(uint8_t SYSCLK)
 	SysTick->CTRL = 0xfffffffb;
 	fac_us=SYSCLK/8;
 	fac_ms=(uint16_t)fac_us*1000;
-
 }
 
 /******************************************************************************
@@ -73,7 +71,7 @@ void delay_us(uint16_t nus)
 	SysTick->CTRL =0x01;
 	do
 	{
-	 temp = SysTick->CTRL;
+		temp = SysTick->CTRL;
 	}
 	while((temp&0x01)&&(!(temp&(1<<16))));
 	SysTick->CTRL = 0x00;
@@ -93,7 +91,7 @@ void delay_ms(uint16_t nms)
 	SysTick->CTRL =0x01;
 	do
 	{
-	 temp = SysTick->CTRL;
+		temp = SysTick->CTRL;
 	}
 	while((temp&0x01)&&(!(temp&(1<<16))));
 	SysTick->CTRL = 0x00;
@@ -109,12 +107,12 @@ void delay_ms(uint16_t nms)
 void *osMalloc(uint16_t size)
 {
     void *memory = (void *)pvPortMalloc(size);
-		if (memory)
-		{
-	 		memset(memory, 0, size);
-    	return memory;
-		}
-		return NULL;
+	if (memory)
+	{
+		memset(memory, 0, size);
+		return memory;
+	}
+	return NULL;
 }
 /******************************************************************************
  * @DESCRIPTION: 

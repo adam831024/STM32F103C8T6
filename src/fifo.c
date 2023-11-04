@@ -59,9 +59,9 @@ bool IsFifoFull( Fifo_t *fifo )
 
 uint16_t FifoCount(Fifo_t *fifo)
 {
-	 uint16_t r;
-     r= fifo->End - fifo->Begin;
-	 if ( (int32_t)r < 0) r+= fifo->Size;
+    uint16_t r;
+    r= fifo->End - fifo->Begin;
+    if ( (int32_t)r < 0) r+= fifo->Size;
 	return r;
 
 	/*return (fifo->Size - 1) & (fifo->End - fifo->Begin);*/
